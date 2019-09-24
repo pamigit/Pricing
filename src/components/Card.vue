@@ -16,7 +16,7 @@
             <div class="mt-3 mb-4">
                 <img :src="card.thumbnailUrl" alt="thumbnail" />
             </div>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+            <router-link to="/signup"><a class="btn btn-outline-primary">Sign up for free</a></router-link>
         </div>
     </div>
 </template>

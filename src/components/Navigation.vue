@@ -7,7 +7,7 @@
       <router-link class="p-2 text-dark" to="/enterprise"><a>Enterprise</a></router-link> 
       <router-link class="p-2 text-dark" to="/support"><a>Support</a></router-link>
     </nav>
-    <a class="btn btn-outline-primary" href="#">Sign up</a>
+    <router-link to="/signup"><a class="btn btn-outline-primary">Sign up</a></router-link>
   </div>
 </template>
 
