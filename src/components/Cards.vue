@@ -1,6 +1,7 @@
 <template>
     <div class="container">
-        <div class="card-deck mb-3 text-center">
+        <p v-if="cards.length < 1" class="empty-table">No cards!!!</p>
+        <div v-else class="card-deck mb-3 text-center">
             <Card v-for="card in cards" v-bind:key="card.id" v-bind:card="card" v-on:del-card="deleteCard"/>
         </div>
     </div>
@@ -34,3 +35,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    .empty-table {
+        text-align: center;
+    }
+</style>
