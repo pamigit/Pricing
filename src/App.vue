@@ -1,21 +1,15 @@
 <template>
   <div id="app">
-    <Navigation />
-    <div>
-      <router-view/>
-    </div>
-    <Footer />
+      <transition name="moveInUp">
+        <router-view />
+      </transition>
   </div>
 </template>
 
 <script>
-import Navigation from "./components/Navigation"
-import Footer from "./components/Footer"
 export default {
-  components: {
-    Navigation,
-    Footer
-  }
+  
+
 }
 </script>
 
@@ -36,5 +30,19 @@ export default {
   }
   .card-deck .card {
     min-width: 220px;
+  }
+  .moveInUp-enter-active{
+    animation: fadeIn 1.5s ease-in;
+  }
+  @keyframes fadeIn{
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 0.5;
+    }
+    100%{
+      opacity: 1;
+    }
   }
 </style>

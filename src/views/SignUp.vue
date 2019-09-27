@@ -2,7 +2,7 @@
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto">
         <h1 class="display-4 text-center">Sign Up</h1>
         <div>
-        <form v-on:submit.prevent="handleSubmit" class="container">
+        <form v-on:submit.prevent="handleSubmit" class="container mt-5">
             <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
@@ -23,7 +23,7 @@
             </div>
             <div class="form-group row">
                 <div class="col-sm-10">
-                    <button class="btn btn-primary">Sign in</button>
+                    <router-link to="/"><button class="btn btn-primary">Sign in</button></router-link>
                 </div>
             </div>
             
@@ -63,10 +63,10 @@ export default {
                 this.error = true;
                 return;
             }
-
             
             //this.$emit("signin-user", this.user);
-            this.userEmail = true;
+            //this.$router.push("pricing");
+            
             this.$refs.first.focus();
             this.user = {
                 email: "",
